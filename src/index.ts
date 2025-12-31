@@ -8,6 +8,7 @@ const app = new Hono()
 app.use(logger())
 
 app.use("/mics2.png", serveStatic({ path: './static/mics2.png' }))
+app.use("/image.jpeg", serveStatic({ path: './static/image.jpeg' }))
 
 app.get('/', (c) => {
   return c.text('Hello Hono!')
